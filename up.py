@@ -14,6 +14,7 @@ print('Beginning file download with urllib2...')
 required = [""]
 required[0]="locmaker.py"
 required[1]="locmaker_README.txt"
+required[2]="Run.cmd"
 for item in required:
     url = 'https://raw.github.com/Chupachu/LocMaker/master/'+item  
     urllib.request.urlretrieve(url, item)
