@@ -1,3 +1,2 @@
-Use this file to generate nations in bulk.  Notes like these aren't read since there are less than 2 | lines.
 GER|Germany|German
 FRA|France|French

@@ -30,19 +30,13 @@ if os.path.isfile(filename):
     if file==1:
         f = open("countries.txt","r")
         countrylines = f.read().split('\n')
-        for line in countrylines:
-            if line==""or line=="\n":
-                countrylines.remove(line)
-        
         f.close()
         print(str(len(countrylines))+" country lines detected.")
     f = open("ideologies.txt", "r")
     ideologytxt=f.read()
     idelines = ideologytxt.split('\n')
     f.close()
-    for line in idelines:
-        if line=="" or line =="\n":
-            idelines.remove(line)
+
     print(str(len(idelines))+" ideology lines detected.")
     txt=""
     for country in countrylines:

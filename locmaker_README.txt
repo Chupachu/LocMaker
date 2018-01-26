@@ -6,7 +6,7 @@ USAGE
 
 This section explains basic fundamentals of how to run the program.
 
-1. Run the locmaker batch file
+1. Run the Run.bat file (You can run the python script, but the bat is more convenient, especially if there is an issue.)
 
 2. Decide whether you want to run files in bulk, or if you want to enter them individually.
 

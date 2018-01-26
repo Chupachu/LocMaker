@@ -10,19 +10,17 @@ from collections import defaultdict
 
 import urllib.request
 
-print('Beginning file download with urllib2...')
-required = [""]
-required[0]="locmaker.py"
-required[1]="locmaker_README.txt"
-required[2]="Run.cmd"
+
+required = ["locmaker.py","locmaker_README.txt","Run.cmd"]
+
 for item in required:
+    print('Downloading '+item+'...')
     url = 'https://raw.github.com/Chupachu/LocMaker/master/'+item  
     urllib.request.urlretrieve(url, item)
-optionals = [""]
-optionals[0]="countries.txt"
-optionals[1]="ideologies.txt"
-optionals[2]="out.yml"
+optionals = ["countries.txt","ideologies.txt","out.yml"]
+
 for item in optionals:
     if not os.path.isfile(item):
+        print('Downloading '+item+'...')
         url = 'https://raw.github.com/Chupachu/LocMaker/master/'+item  
         urllib.request.urlretrieve(url, item)  
