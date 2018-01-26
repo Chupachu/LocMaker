@@ -55,15 +55,16 @@ if os.path.isfile(filename):
             for line in idelines:
                 
                 idesplit = line.split('|')
-                idesplit[1] = idesplit[1].replace('[ADJ]',cadj)
-                idesplit[1] = idesplit[1].replace('[NAME]',cfullname)
-                newstr = idesplit[1]
-                print(""+cname+"_"+idesplit[0]+":0 \""+newstr+"\"")
-                txt+="\n "+cname+"_"+idesplit[0]+":0 \""+newstr+"\""
-                print(""+cname+"_"+idesplit[0]+"_DEF:0 \""+newstr+"\"")
-                txt+="\n "+cname+"_"+idesplit[0]+"_DEF:0 \""+newstr+"\""
-                print(""+cname+"_"+idesplit[0]+"_ADJ:0 \""+cadj+"\"")
-                txt+="\n "+cname+"_"+idesplit[0]+"_ADJ:0 \""+cadj+"\""
+                if len(idesplit) > 1:
+                    idesplit[1] = idesplit[1].replace('[ADJ]',cadj)
+                    idesplit[1] = idesplit[1].replace('[NAME]',cfullname)
+                    newstr = idesplit[1]
+                    print(""+cname+"_"+idesplit[0]+":0 \""+newstr+"\"")
+                    txt+="\n "+cname+"_"+idesplit[0]+":0 \""+newstr+"\""
+                    print(""+cname+"_"+idesplit[0]+"_DEF:0 \""+newstr+"\"")
+                    txt+="\n "+cname+"_"+idesplit[0]+"_DEF:0 \""+newstr+"\""
+                    print(""+cname+"_"+idesplit[0]+"_ADJ:0 \""+cadj+"\"")
+                    txt+="\n "+cname+"_"+idesplit[0]+"_ADJ:0 \""+cadj+"\""
     f = open("out.yml", "w+")
     
     f.write(txt)
