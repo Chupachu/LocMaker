@@ -1,6 +1,5 @@
 import os
 import sys
-import asyncio
 import shutil
 from io import BytesIO
 from functools import wraps
